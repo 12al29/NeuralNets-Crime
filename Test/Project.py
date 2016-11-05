@@ -1,3 +1,6 @@
+'''
+Predicts longitude and latitude of upcoming crimes
+'''
 import numpy
 import pandas
 import math
@@ -7,6 +10,10 @@ from keras.layers import Dense
 from keras.layers import LSTM
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
+
+'''
+SHAPE THE DATASET
+'''
 
 numpy.random.seed(7)
 
@@ -31,7 +38,9 @@ testX_main, testY_main = create_database(test_main,4)
 trainX_main = numpy.reshape(trainX_main,(trainX_main.shape[0],4,2))
 testX_main = numpy.reshape(testX_main,(testX_main.shape[0],4,2))
 
-
+'''
+RUN THE NEURAL NET
+'''
 
 model=Sequential()
 model.add(LSTM(32,input_dim=2))
