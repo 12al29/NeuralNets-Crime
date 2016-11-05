@@ -53,7 +53,7 @@ model=Sequential()
 model.add(LSTM(32,input_dim=6))
 model.add(Dense(6))
 model.compile(loss='mean_squared_error',optimizer='adam')
-model.fit(trainX_main, trainY_main, nb_epoch=10,batch_size=10, verbose=2)
+model.fit(trainX_main, trainY_main, nb_epoch=int(len(trainX_main)/10),batch_size=10, verbose=2)
 
 score = model.evaluate(testX_main,testY_main,batch_size=10)
 
