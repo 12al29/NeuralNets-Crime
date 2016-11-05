@@ -64,10 +64,12 @@ for x in incident_type:
     elif (val ==1):
         incident_type[i]=[0,1,0,0,0,0]
     elif (val==2):
-        incident_type[i]=[0,0,1,0,0,0]
+        incident_type[i]=[0,1,0,0,0,0]
     elif (val==3):
-        incident_type[i]=[0,0,0,1,0,0]
+        incident_type[i]=[0,0,1,0,0,0]
     elif (val==4):
+        incident_type[i]=[0,0,0,0,1,0]
+    elif (val==5):
         incident_type[i]=[0,0,0,0,1,0]
     else:
         incident_type[i]=[0,0,0,0,0,1]
