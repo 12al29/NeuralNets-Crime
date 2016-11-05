@@ -15,7 +15,7 @@ dataframe = numpy.loadtxt("Kingston_Police_Formatted.csv",delimiter=",")
 train_size = int(len(dataframe)*0.67)
 test_size = int(len(dataframe)-train_size)
 
-train, test=dataframe[0:train_size,:], dataframe[train_size:len(dataframe),:]
+train, test=dataframe[0:train_size,:6], dataframe[train_size:len(dataframe),:6]
 train_main, test_main = dataframe[0:train_size,:6], dataframe[train_size:len(dataframe),:6]
 
 def create_database(dataset,look_back=1):
